@@ -42,9 +42,15 @@ public class Main {
         }
         main_panel.add(user_buttons_panel);
 
+        //Create new user button panel
+        JPanel new_user_panel = new JPanel();
+        JButton button = new JButton("New User");
+        new_user_panel.add(button);
+        main_panel.add(new_user_panel);
+
         //adding panels
         frame.add(main_panel);
-        frame.pack();
+        frame.pack(); //this is what dynamically handle frame size.
         frame.setVisible(true);
     }
 }
