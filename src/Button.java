@@ -24,6 +24,6 @@ public class Button extends JButton implements ActionListener {
 
     //get the label text
     public String getLabel_text(){
-        return label_text;
+        return this.label.getText();
     }
 }
