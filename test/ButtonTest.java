@@ -17,12 +17,17 @@ class ButtonTest {
 
     @Test
     void actionPerformed() {
+        a.doClick();
+        assertEquals("this is cool.", a.getLabel_text());
+        assertEquals("button-b", b.getLabel_text());
+
     }
 
     @Test
     void setLabel_text() {
         a.setLabel_text("button-a-changed");
-        assertEquals("button-a-changed", a.getLabel_text());
+        assertEquals("button-a-changed", a.getLabel_text()); //check if a changed
+        assertEquals("button-b", b.getLabel_text()); //make sure b did not change.
     }
 
     @Test
