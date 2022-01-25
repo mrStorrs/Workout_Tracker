@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ButtonTest {
     static Button a, b;
 
-
-
     @BeforeAll
     public static void setUp(){
         a = new Button("button-a");
