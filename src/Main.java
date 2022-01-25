@@ -15,17 +15,22 @@ public class Main {
         users.add(new User("cj"));
         users.add(new User("bob"));
 
+        //Creating the frame.
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(200,100);
+
+        //Creating the main panel
+        JPanel main_panel = new JPanel();
+        BoxLayout box_layout= new BoxLayout(main_panel, BoxLayout.Y_AXIS);
+        main_panel.setLayout(box_layout);
 
         //creating user heading panel
         JPanel user_heading = new JPanel();
         user_heading.add(new JLabel("Current Users"));
+        main_panel.add(user_heading);
 
-        //creating user buttons panel, and buttons.
+        //creating user buttons panel
         JPanel user_buttons_panel = new JPanel();
-
         //dynamically creating user buttons.
         for(User user : users){
             JButton button = new JButton(user.getName());
@@ -35,10 +40,11 @@ public class Main {
                 System.out.println("Adding Button for user: " + user.getName());
             }
         }
+        main_panel.add(user_buttons_panel);
 
         //adding panels
-        frame.getContentPane().add(BorderLayout.NORTH, user_heading);
-        frame.getContentPane().add(BorderLayout.SOUTH, user_buttons_panel);
+        frame.add(main_panel);
+        frame.pack();
         frame.setVisible(true);
     }
 }
