@@ -1,6 +1,8 @@
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
+import java.awt.*;
+import java.awt.event.*;
+
 import java.util.Iterator;
 
 public class Main {
@@ -31,10 +33,30 @@ public class Main {
 
         //creating user buttons panel
         JPanel user_buttons_panel = new JPanel();
-        //dynamically creating user buttons.
+
+
+        //dynamically creating user buttons
+        String[] user_label = new String[users.size()]; //will hold unique label
         for(User user : users){
-            JButton button = new JButton(user.getName());
+            Button button = new Button(user.getName());
+
+//            user_label[user.getId()] = ;
+//            JButton button = new JButton();
+//            JLabel label = new JLabel();
+//            label.setText(user.getName());
+//            button.add(label);
+//
+//            button.addActionListener(new ActionListener(){
+//                public void actionPerformed(ActionEvent e){
+//                    label.setText("boobs");
+//                }
+//            });
+
             user_buttons_panel.add(button);
+
+
+
+
             if(DEBUGGING){
                 main_debug.start_debug();
                 System.out.println("Adding Button for user: " + user.getName());
