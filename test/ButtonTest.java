@@ -18,7 +18,7 @@ class ButtonTest {
     @Test
     void actionPerformed() {
         a.doClick();
-        assertEquals("this is cool.", a.getLabel_text());
+        assertEquals("this", a.getLabel_text());
         assertEquals("button-b", b.getLabel_text());
 
     }

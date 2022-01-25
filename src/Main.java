@@ -36,26 +36,9 @@ public class Main {
 
 
         //dynamically creating user buttons
-        String[] user_label = new String[users.size()]; //will hold unique label
         for(User user : users){
             Button button = new Button(user.getName());
-
-//            user_label[user.getId()] = ;
-//            JButton button = new JButton();
-//            JLabel label = new JLabel();
-//            label.setText(user.getName());
-//            button.add(label);
-//
-//            button.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent e){
-//                    label.setText("boobs");
-//                }
-//            });
-
             user_buttons_panel.add(button);
-
-
-
 
             if(DEBUGGING){
                 main_debug.start_debug();

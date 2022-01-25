@@ -14,7 +14,7 @@ public class Button extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        this.setLabel_text("this is cool.");
+        this.setLabel_text("this");
     }
 
     //set the labeltext
